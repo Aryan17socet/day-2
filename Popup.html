@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Popup</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+           $(document).ready(function () {
+            $("#dialog").dialog({
+                autoOpen:false
+            });
+            $("#click").click(function(){
+                $("#dialog").dialog("open");
+            })
+           
+        });
+
+    </script>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dialog" title="POPUP"><br>
+        <h3>declaration.....<h3>
+                <input type="text" class="" id="" name="" placeholder="" required>
+    </div>
+    <button id="click">click</button>
+
+</body>
+
+</html>

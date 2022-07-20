@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <style>
+        .lsitem {
+            color: white;
+            width: 50ch;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(119, 159, 239);
+            border-radius: 10px;
+            margin: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="sort1" class="open">
+        <li class="lsitem">
+            <p>sort 5</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 8</p>
+        </li>
+        <li class="lsitem">
+            </p>sort 7</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 6</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 9</p>
+        </li>
+    </ul>
+    <ul id="sort2" class="open">
+        <li class="lsitem">
+            <p>sort 1</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 4</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 3</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 2</p>
+        </li>
+        <li class="lsitem">
+            <p>sort 10</p>
+        </li>
+    </ul>
+
+
+    <script>
+        // $(function () {
+        //     $("#sort1 ").sortable();
+        // });
+
+        $(function () {
+            $("#sort1, #sort2").sortable({
+                connectWith: ".open"
+            }).disableSelection();
+        });
+
+    </script>
+
+</body>
+
+</html>

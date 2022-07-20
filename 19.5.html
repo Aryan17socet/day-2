@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#slider").slider();
+        });
+      
+         $(function() {
+            $( "#slider-3").slider({
+               range:true,
+               min: 0,
+               max: 500,
+               values: [ 35, 200 ],
+               slide: function( event, ui ) {
+                  $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+               }
+            });
+            $( "#price" ).val( "$" + $( "#slider-3" ).slider( "values", 0 ) +
+               " - $" + $( "#slider-3" ).slider( "values", 1 ) );
+         });
+         $( "#start" ).val( "$" + $( "#slider-3" ).slider( "values", 0 ) +
+               " - $" + $( "#slider-3" ).slider( "values", 1 ) );
+        
+      </script>
+   
+    <style>
+        #slide {
+            font-size: x-small;
+        }
+
+        body {
+            background-color: bisque
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Your Age
+        <input type="text" class="" id="" name="" placeholder="38" style="margin: 0px;">
+    </div>
+    
+   
+      
+     
+ 
+    <div id = "slider"></div><br><br>
+   
+      <!-- HTML --> 
+      <div id = "slider-3"></div>
+      <p>
+         <label for = "price">Price range:</label>
+         <input type = "text" id = "price" 
+            style = "border:0; color:#b9cd6d; font-weight:bold;">
+      </p>
+      <p>
+        <label for = "price"> Start Price range:</label>
+        <input type = "text" id = "price" 
+           style = "border:0; color:#b9cd6d; font-weight:bold;">
+     </p>
+    
+</body>
+
+</html>
